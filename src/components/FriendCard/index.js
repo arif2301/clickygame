@@ -5,7 +5,7 @@ function FriendCard(props) {
   return (
     <div className="card">
       <div className="img-container">
-        <span onClick={() => props.removeFriend(props.id)} className="remove">
+        <span onClick={() => props.score(props.id)} className="remove">
         <img alt={props.name} src={props.image} />
         </span>
       </div>
