@@ -17,16 +17,38 @@ import React from "react";
 //   }
 
 
-  function Navbar() {
+  // function Navbar() {
+  //   return (
+  //     <nav className="navbar">
+  //       <ul>
+  //           <li className="brand">Clicky Game</li>
+  //           <li>Click an image to begin!</li>
+  //           <li>Score: 0 | Top Score: 0</li>
+  //       </ul>
+  //     </nav>
+  //   );
+  // }
+
+
+
+// import newscoreandyourscore here
+  function Navbar(props) {
     return (
-      <nav className="navbar">
-        <ul>
-            <li className="brand">Clicky Game</li>
-            <li>Click an image to begin!</li>
-            <li>Score: 0 | Top Score: 0</li>
+      <nav className="navbar navbar-light bg-light">
+      <h1 className="navbar-brand mb-0 h1">Clicky Game</h1>
+
+
+      
+        <ul className="navbar-nav mr-auto">
+          <li className="nav-item active">
+            <a className="navbar-text">Click an image to begin!         <span className="sr-only">(current)</span></a>
+            <a className="navbar-text">   Score: 0 <span className="sr-only">(current)</span></a>
+            <a className="navbar-text">| Top Score: 0         <span className="sr-only">(current)</span></a>
+          </li>         
         </ul>
+
       </nav>
-    );
+    )
   }
-  
+
   export default Navbar;

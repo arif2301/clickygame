@@ -9,17 +9,25 @@ import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import friends from "./friends.json";
 
-// function to shuffle the array
-const shuffle = array => {
-  array.sort(() => Math.random() - 0.5);
-}
 
 class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
-    friends
+    friends,
+      // yourscore,
+      // topscore
   };
 
+  // 0 = yourscore , topscore
+  // score [0] = { yourscore: 1231, topscore: 1231 }
+  // const score = {
+  //   yourscore,
+  //   topscore
+  // }
+// function to shuffle the array
+ shuffle = array => {
+  array.sort(() => Math.random() - 0.5);
+}
 
 
   removeFriend = id => {
@@ -37,9 +45,11 @@ class App extends Component {
       console.log ("id ; " + id);
     let topscore = 0;
     let yourscore = 0;
-    console.log ("clicked : " + this.state.friends.clicked); 
+    // loop though and match id to the clicked item;
+    console.log ("clicked : " + this.state.friends); 
+    //console.log ("clicked : " + this.state.friends[id].clicked); 
     
-    if (this.state.friends.clicked === false) {
+    if (this.state.friends.clicked === 0) {
       yourscore++;
       console.log ("yourscore : " + yourscore)
       //this.friends.clicked === true;
@@ -53,7 +63,10 @@ class App extends Component {
     // how do i change the arrangment of the photos?
     // is this correct?
 
-    shuffle (this.state.friends);  
+    // eslint-disable-next-line no-undef
+    // use this.setstae to fix this and the clicked issue
+    let randomFriends = this.state.friends.sort(() => Math.random() - 0.5); 
+    this.setState({ randomFriends });
 
     console.log ("new array : " + this.state.friends[0].name); 
     
@@ -70,7 +83,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Navbar />
+        <Navbar yourScore ={this.state.yourscore} />
         <Title>Clicky Game</Title>
         {this.state.friends.map(friend => (
           <FriendCard
