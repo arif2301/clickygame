@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 
+// function that prints out the images
 function FriendCard(props) {
   return (
     <div className="card">
@@ -13,20 +14,5 @@ function FriendCard(props) {
   );
 }
 
-// function FriendCard(props) {
-//   return (
-//     <div className="container">
-//       <div className="row">
-//         <div className="col-sm-3">
-//           <span onClick={() => props.score(props.id)} className="remove">
-//           <img alt={props.name} src={props.image} className="img-thumbnail" />
-//           </span>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
 
 export default FriendCard;
-//
-//    

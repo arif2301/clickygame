@@ -1,37 +1,9 @@
-//import "https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css";
-//import "https://d33wubrfki0l68.cloudfront.net/css/ba81d45f1eb54096e2d1717c5edcbf3af9a19812/static/css/main.269f401f.css";
+
 
 import React from "react";
 
-
-// function Navbar() {
-//     return (
-//       <nav className="navbar">
-//         <ul>
-//             <li className="brand">Clicky Game</li>
-//             <li>Click an image to begin!</li>
-//             <li>Score: 0 | Top Score: 0</li>
-//         </ul>
-//       </nav>
-//     );
-//   }
-
-
-  // function Navbar() {
-  //   return (
-  //     <nav className="navbar">
-  //       <ul>
-  //           <li className="brand">Clicky Game</li>
-  //           <li>Click an image to begin!</li>
-  //           <li>Score: 0 | Top Score: 0</li>
-  //       </ul>
-  //     </nav>
-  //   );
-  // }
-
-
-
-// import newscoreandyourscore here
+// import topscore and yourscore here
+// in line 16 and 17, it should've worked but it doesn't not sure why, any feedback is appreciated
   function Navbar(props) {
     return (
       <nav className="navbar navbar-light bg-light">
@@ -41,9 +13,9 @@ import React from "react";
       
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-            <a className="navbar-text">Click an image to begin!         <span className="sr-only">(current)</span></a>
-            <a className="navbar-text">   Score: 0 <span className="sr-only">(current)</span></a>
-            <a className="navbar-text">| Top Score: 0         <span className="sr-only">(current)</span></a>
+            <span className="navbar-text">Click an image to begin!       . <span className="sr-only">(current)</span></span>
+            <span className="navbar-text">   Score: {props.yourScore}<span className="sr-only">(current)</span></span>
+            <span className="navbar-text">| Top Score: {props.totalScore}  <span className="sr-only">(current)</span></span>
           </li>         
         </ul>
 

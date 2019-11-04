@@ -2,6 +2,7 @@
   "name": "clickygame",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://arif2301.github.io/clickygame",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "react": "^16.11.0",
